@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Issue #3 - Architecture Diagram</title>
+  <style>
+    /* Diagram CSS Classes Reference */
+    .diagram-container { display: flex; flex-direction: column; align-items: center; padding: 40px; background: #1a1a1a; border-radius: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .node { padding: 16px 24px; border-radius: 8px; font-weight: 600; text-align: center; min-width: 160px; font-size: 14px; }
+    .node-primary { background: linear-gradient(135deg, #3f51b5 0%, #5c6bc0 100%); color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+    .node-secondary { background: linear-gradient(135deg, #5c6bc0 0%, #7986cb 100%); color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+    .node-accent { background: linear-gradient(135deg, #ff4081 0%, #ff80ab 100%); color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+    .node-neutral { background: #424242; color: #e0e0e0; border: 1px solid #616161; }
+    .row { display: flex; gap: 30px; align-items: center; justify-content: center; flex-wrap: wrap; margin: 20px 0; }
+    .column { display: flex; flex-direction: column; gap: 30px; align-items: center; margin: 20px 0; }
+    .arrow-down { width: 2px; height: 40px; background: linear-gradient(to bottom, #757575, #9e9e9e); position: relative; }
+    .arrow-down::after { content: ''; position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%); border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 10px solid #9e9e9e; }
+    .arrow-right { width: 60px; height: 2px; background: linear-gradient(to right, #757575, #9e9e9e); position: relative; }
+    .arrow-right::after { content: ''; position: absolute; right: -8px; top: 50%; transform: translateY(-50%); border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 10px solid #9e9e9e; }
+    .label { font-size: 12px; color: #9e9e9e; margin-top: 8px; text-align: center; max-width: 200px; }
+    .title { font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 40px; text-align: center; }
+    .legend { display: flex; gap: 20px; margin-top: 30px; flex-wrap: wrap; justify-content: center; }
+    .legend-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #bdbdbd; }
+    .legend-node { width: 20px; height: 20px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div class="diagram-container">
+    <div class="title">Drag-and-Drop Architecture Flow</div>
+    
+    <div class="column">
+      <!-- User Action -->
+      <div class="node node-primary">
+        🖱️ User Drags Item
+        <div class="label">Initiates drag on drag handle</div>
+      </div>
+      
+      <div class="arrow-down"></div>
+      
+      <!-- DndContext -->
+      <div class="node node-secondary">
+        📦 DndContext
+        <div class="label">Manages drag state & events</div>
+      </div>
+      
+      <div class="arrow-down"></div>
+      
+      <!-- SortableContext -->
+      <div class="row">
+        <div class="node node-neutral">
+          📋 SortableContext
+          <div class="label">Tracks item order</div>
+        </div>
+      </div>
+      
+      <div class="arrow-down"></div>
+      
+      <!-- onDragEnd Handler -->
+      <div class="node node-accent">
+        ⚡ onDragEnd Handler
+        <div class="label">Calculates new order</div>
+      </div>
+      
+      <div class="arrow-down"></div>
+      
+      <!-- API Call -->
+      <div class="row">
+        <div class="node node-secondary">
+          🌐 reorderTodos API
+          <div class="label">PUT /api/todos/reorder</div>
+        </div>
+      </div>
+      
+      <div class="arrow-down"></div>
+      
+      <!-- Backend -->
+      <div class="node node-primary">
+        🔧 Backend Handler
+        <div class="label">Updates order in database</div>
+      </div>
+      
+      <div class="arrow-down"></div>
+      
+      <!-- Database -->
+      <div class="node node-neutral">
+        💾 SQLite Database
+        <div class="label">Persists new order</div>
+      </div>
+      
+      <div class="arrow-down"></div>
+      
+      <!-- UI Update -->
+      <div class="node node-success" style="background: linear-gradient(135deg, #4caf50 0%, #81c784 100%); color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+        ✅ UI Re-renders
+        <div class="label">Shows updated order</div>
+      </div>
+    </div>
+    
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-node" style="background: linear-gradient(135deg, #3f51b5, #5c6bc0);"></div>
+        <span>Primary Component</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-node" style="background: linear-gradient(135deg, #5c6bc0, #7986cb);"></div>
+        <span>dnd-kit</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-node" style="background: linear-gradient(135deg, #ff4081, #ff80ab);"></div>
+        <span>Handler</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-node" style="background: #424242; border: 1px solid #616161;"></div>
+        <span>Support</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-node" style="background: linear-gradient(135deg, #4caf50, #81c784);"></div>
+        <span>Success State</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

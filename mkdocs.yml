@@ -12,5 +12,6 @@ nav:
 - Plans:
   - 'Issue #1 - Add subcategory support': plans/issue-1-plan.md
   - 'Issue #2 - Add sub-categories support': plans/issue-2-plan.md
+  - 'Issue #3 - Implement drag-and-drop list reordering': plans/issue-3-plan.md
 extra_css:
 - stylesheets/extra.css
