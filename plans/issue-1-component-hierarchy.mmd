@@ -1,0 +1,8 @@
+graph TD
+    A[App] --> B[AddTodoForm]
+    A --> C[CategoryForm]
+    A --> D[TodoList]
+    D --> E[TodoItem - Category]
+    D --> F[TodoItem - Todo]
+    E --> G[TodoList - Children]
+    G --> F

@@ -1,0 +1,11 @@
+erDiagram
+    TODOS {
+        INTEGER id PK
+        TEXT title
+        BOOLEAN completed
+        DATETIME created_at
+        INTEGER parent_id FK
+        TEXT item_type
+    }
+    
+    TODOS ||--o{ TODOS : "parent_id references"

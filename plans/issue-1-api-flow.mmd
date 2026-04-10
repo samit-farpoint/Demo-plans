@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant U as User
+    participant FE as Frontend
+    participant API as Backend API
+    participant DB as Database
+
+    U->>FE: Click "Add Category"
+    FE->>API: POST /api/categories {title}
+    API->>DB: INSERT INTO todos (title, item_type)
+    DB-->>API: {id, title, item_type: 'category'}
+    API-->>FE: 201 Created
+    FE-->>U: Display new category
+
+    U->>FE: Add todo under category
+    FE->>API: POST /api/todos {title, parentId}
+    API->>DB: INSERT INTO todos (title, parent_id, item_type)
+    DB-->>API: {id, title, parent_id, item_type: 'todo'}
+    API-->>FE: 201 Created
+    FE-->>U: Display todo under category

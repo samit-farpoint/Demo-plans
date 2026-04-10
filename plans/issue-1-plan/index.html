@@ -1,0 +1,1291 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Issue #1 - Add subcategory support - Implementation Plans</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#issue-1-add-subcategory-support-to-todo-items" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Implementation Plans" class="md-header__button md-logo" aria-label="Implementation Plans" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Implementation Plans
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Issue #1 - Add subcategory support
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Implementation Plans" class="md-nav__button md-logo" aria-label="Implementation Plans" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Implementation Plans
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plans
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plans
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Issue #1 - Add subcategory support
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Issue #1 - Add subcategory support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root-cause-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proposed-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proposed Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files-to-modify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Files to Modify
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-database-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Database Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-backend-api-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Backend API Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-frontend-type-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Frontend Type Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-frontend-api-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: Frontend API Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-5-ui-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 5: UI Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-6-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 6: Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Strategy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unit Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risks-mitigations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Risks &amp; Mitigations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrams
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagrams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-flow-create-category-with-child-todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Flow - Create Category with Child Todo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#component-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Component Hierarchy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-mockups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI Mockups
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UI Mockups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#category-visual-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category Visual Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual States
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceptance-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acceptance Criteria
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Enhancements
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root-cause-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root Cause Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proposed-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proposed Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files-to-modify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Files to Modify
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-database-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Database Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-backend-api-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Backend API Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-frontend-type-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Frontend Type Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-frontend-api-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: Frontend API Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-5-ui-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 5: UI Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-6-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 6: Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Strategy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unit Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risks-mitigations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Risks &amp; Mitigations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrams
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagrams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-flow-create-category-with-child-todo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Flow - Create Category with Child Todo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#component-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Component Hierarchy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-mockups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI Mockups
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UI Mockups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#category-visual-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category Visual Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual States
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceptance-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acceptance Criteria
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Enhancements
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="issue-1-add-subcategory-support-to-todo-items">Issue #1: Add subcategory support to todo items</h1>
+<h2 id="summary">Summary</h2>
+<p>Implement a hierarchical category system that allows users to organize todo items under parent categories, enabling better task organization and grouping within the todo list.</p>
+<h2 id="root-cause-analysis">Root Cause Analysis</h2>
+<p><strong>Current State:</strong>
+- Todos are flat items with only <code>id</code>, <code>title</code>, <code>completed</code>, and <code>created_at</code> fields
+- No ability to group related tasks or create hierarchical structures
+- Users cannot organize complex projects or workflows effectively</p>
+<p><strong>Desired State:</strong>
+- Support for category items that can contain child todos
+- Hierarchical parent-child relationships between items
+- Visual distinction between categories and regular todos
+- Ability to expand/collapse categories to show/hide children</p>
+<h2 id="proposed-solution">Proposed Solution</h2>
+<p>Implement <strong>Option B</strong> from the issue description - a <code>parent_id</code> based approach for true hierarchical subcategories. This provides maximum flexibility for nested structures.</p>
+<p><strong>Key Design Decisions:</strong></p>
+<ol>
+<li>
+<p><strong>Single Table Approach</strong>: Add <code>parent_id</code> and <code>item_type</code> columns to the existing <code>todos</code> table rather than creating a separate categories table. This simplifies queries and maintains backward compatibility.</p>
+</li>
+<li>
+<p><strong>Item Types</strong>: </p>
+</li>
+<li><code>category</code>: Items that can have children but cannot be completed</li>
+<li>
+<p><code>todo</code>: Regular todo items that can be completed and may have a parent</p>
+</li>
+<li>
+<p><strong>Circular Reference Prevention</strong>: Backend validation to ensure a category cannot be its own descendant.</p>
+</li>
+<li>
+<p><strong>Cascading Deletes</strong>: When a category is deleted, all child items are also deleted.</p>
+</li>
+</ol>
+<h2 id="files-to-modify">Files to Modify</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>server/src/db/database.js</code></td>
+<td>Add <code>parent_id</code> and <code>item_type</code> columns to schema</td>
+</tr>
+<tr>
+<td><code>server/src/routes/todos.js</code></td>
+<td>Add category creation, parent filtering, circular reference validation, cascade delete</td>
+</tr>
+<tr>
+<td><code>electron/src/routes/todos.ts</code></td>
+<td>Mirror server route changes for Electron build</td>
+</tr>
+<tr>
+<td><code>client/src/types/todo.ts</code></td>
+<td>Add <code>parentId</code>, <code>itemType</code>, <code>children</code> fields to Todo interface</td>
+</tr>
+<tr>
+<td><code>client/src/api/todoApi.ts</code></td>
+<td>Add <code>createCategory</code>, <code>fetchTodosByParent</code>, <code>deleteCategory</code> functions</td>
+</tr>
+<tr>
+<td><code>client/src/components/TodoList.tsx</code></td>
+<td>Support nested rendering, expand/collapse state</td>
+</tr>
+<tr>
+<td><code>client/src/components/TodoItem.tsx</code></td>
+<td>Visual distinction for categories, expand/collapse UI</td>
+</tr>
+<tr>
+<td><code>client/src/components/AddTodoForm.tsx</code></td>
+<td>Add option to create categories vs todos</td>
+</tr>
+<tr>
+<td><code>client/src/App.tsx</code></td>
+<td>Add category creation handler, filter logic</td>
+</tr>
+</tbody>
+</table>
+<h2 id="new-files">New Files</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>client/src/components/CategoryForm.tsx</code></td>
+<td>Form component for creating new categories</td>
+</tr>
+<tr>
+<td><code>server/src/utils/categoryValidation.js</code></td>
+<td>Utility for circular reference detection</td>
+</tr>
+</tbody>
+</table>
+<h2 id="implementation-steps">Implementation Steps</h2>
+<h3 id="phase-1-database-changes">Phase 1: Database Changes</h3>
+<ol>
+<li>Add migration script to add <code>parent_id INTEGER</code> and <code>item_type TEXT DEFAULT 'todo'</code> columns</li>
+<li>Update schema creation to include new columns</li>
+<li>Add index on <code>parent_id</code> for efficient parent-based queries</li>
+</ol>
+<h3 id="phase-2-backend-api-changes">Phase 2: Backend API Changes</h3>
+<ol>
+<li>Modify GET <code>/api/todos</code> to support optional <code>?parent=</code> query parameter</li>
+<li>Add POST <code>/api/categories</code> endpoint for category creation</li>
+<li>Add GET <code>/api/categories</code> endpoint to list all categories</li>
+<li>Update DELETE to cascade delete children</li>
+<li>Add validation middleware to prevent circular references</li>
+<li>Update response serialization to include <code>item_type</code> and <code>parent_id</code></li>
+</ol>
+<h3 id="phase-3-frontend-type-changes">Phase 3: Frontend Type Changes</h3>
+<ol>
+<li>Update <code>Todo</code> interface with optional <code>parentId</code>, <code>itemType</code>, <code>children</code> fields</li>
+<li>Create <code>Category</code> type extending <code>Todo</code> with specific properties</li>
+</ol>
+<h3 id="phase-4-frontend-api-changes">Phase 4: Frontend API Changes</h3>
+<ol>
+<li>Add <code>createCategory(title: string)</code> function</li>
+<li>Add <code>fetchCategories()</code> function</li>
+<li>Add <code>fetchTodosByParent(parentId: number | null)</code> function</li>
+<li>Update existing functions to handle new response format</li>
+</ol>
+<h3 id="phase-5-ui-components">Phase 5: UI Components</h3>
+<ol>
+<li>Create <code>CategoryForm</code> component for category creation</li>
+<li>Update <code>TodoItem</code> to:</li>
+<li>Display different styling for categories vs todos</li>
+<li>Show expand/collapse chevron for categories</li>
+<li>Hide checkbox for categories (they can't be completed)</li>
+<li>Update <code>TodoList</code> to:</li>
+<li>Support recursive rendering of nested items</li>
+<li>Manage expand/collapse state per category</li>
+<li>Group children under parent categories</li>
+<li>Update <code>AddTodoForm</code> to allow choosing between todo and category</li>
+</ol>
+<h3 id="phase-6-integration">Phase 6: Integration</h3>
+<ol>
+<li>Wire up category creation in App component</li>
+<li>Implement parent-child relationship UI</li>
+<li>Add filtering to show only root-level items by default</li>
+<li>Test expand/collapse functionality</li>
+</ol>
+<h2 id="test-strategy">Test Strategy</h2>
+<h3 id="unit-tests">Unit Tests</h3>
+<ul>
+<li><strong>Backend</strong>: </li>
+<li>Category creation validation</li>
+<li>Circular reference detection (A→B→A, A→A)</li>
+<li>Cascade delete behavior</li>
+<li>Parent filtering queries</li>
+<li><strong>Frontend</strong>:</li>
+<li>CategoryForm submission</li>
+<li>Expand/collapse state management</li>
+<li>Nested rendering logic</li>
+</ul>
+<h3 id="integration-tests">Integration Tests</h3>
+<ul>
+<li>Create category → add todo as child → verify hierarchy</li>
+<li>Delete category → verify children are deleted</li>
+<li>Update parent_id → verify no circular references</li>
+<li>Toggle todo completion under category → verify parent unaffected</li>
+</ul>
+<h3 id="edge-cases">Edge Cases</h3>
+<ul>
+<li>Maximum nesting depth (prevent stack overflow)</li>
+<li>Orphaned todos (parent deleted)</li>
+<li>Empty categories</li>
+<li>Moving todos between categories</li>
+<li>Self-referential parent_id attempts</li>
+<li>Concurrent modifications to same hierarchy</li>
+</ul>
+<h2 id="risks-mitigations">Risks &amp; Mitigations</h2>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Circular references cause infinite loops</strong></td>
+<td>Implement strict validation in backend before any parent_id update; use depth-limited recursion in queries</td>
+</tr>
+<tr>
+<td><strong>Performance degradation with deep nesting</strong></td>
+<td>Limit max depth to 5 levels; add database indexes on parent_id; consider materialized path for complex queries</td>
+</tr>
+<tr>
+<td><strong>Breaking existing todos</strong></td>
+<td>Make new columns optional with defaults; existing todos remain valid with <code>item_type='todo'</code> and <code>parent_id=NULL</code></td>
+</tr>
+<tr>
+<td><strong>UI complexity for nested items</strong></td>
+<td>Start with single-level nesting (categories → todos); add multi-level support in future iteration</td>
+</tr>
+<tr>
+<td><strong>Cascade delete data loss</strong></td>
+<td>Add confirmation dialog before deleting categories; consider soft-delete with <code>deleted_at</code> column in future</td>
+</tr>
+</tbody>
+</table>
+<h2 id="diagrams">Diagrams</h2>
+<h3 id="data-model">Data Model</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../issue-1-data-model.png" data-desc-position="bottom"><img alt="Data Model Diagram" src="../issue-1-data-model.png"></a></p>
+<h3 id="api-flow-create-category-with-child-todo">API Flow - Create Category with Child Todo</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../issue-1-api-flow.png" data-desc-position="bottom"><img alt="API Flow Diagram" src="../issue-1-api-flow.png"></a></p>
+<h3 id="component-hierarchy">Component Hierarchy</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../issue-1-component-hierarchy.png" data-desc-position="bottom"><img alt="Component Hierarchy Diagram" src="../issue-1-component-hierarchy.png"></a></p>
+<h2 id="ui-mockups">UI Mockups</h2>
+<h3 id="category-visual-design">Category Visual Design</h3>
+<p>Categories will have:
+- <strong>Different background color</strong>: Light indigo tint (<code>bg-indigo-50</code>)
+- <strong>Chevron icon</strong>: Right-pointing when collapsed, down when expanded
+- <strong>No checkbox</strong>: Categories cannot be completed
+- <strong>Folder icon</strong>: Visual indicator of category type
+- <strong>Nested indentation</strong>: Children indented 24px under parent</p>
+<h3 id="visual-states">Visual States</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../issue-1-ui-mockup.png" data-desc-position="bottom"><img alt="UI Mockup - Category States" src="../issue-1-ui-mockup.png"></a></p>
+<h2 id="acceptance-criteria">Acceptance Criteria</h2>
+<ul>
+<li>[x] Users can create category items</li>
+<li>[x] Users can create todos under a category</li>
+<li>[x] Categories can be expanded/collapsed to show/hide child todos</li>
+<li>[x] Visual distinction between categories and regular todos</li>
+<li>[x] API supports filtering by parent category</li>
+<li>[x] Existing todos continue to work without modification</li>
+<li>[x] Prevent circular references in parent-child relationships</li>
+</ul>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<ul>
+<li>Drag-and-drop reordering of items</li>
+<li>Multiple categories per todo (tags)</li>
+<li>Category colors and icons</li>
+<li>Category-level completion (complete all children)</li>
+<li>Move todos between categories</li>
+<li>Category templates</li>
+<li>Export/import category structures</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
