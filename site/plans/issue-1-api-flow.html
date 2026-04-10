@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Flow Diagram</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 40px;
+            margin: 0;
+        }
+        .diagram-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        .lifelines {
+            display: flex;
+            gap: 60px;
+            margin-bottom: 20px;
+        }
+        .lifeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .actor-box {
+            background: #3f51b5;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            min-width: 100px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(63, 81, 181, 0.4);
+        }
+        .actor-box.api {
+            background: #5c6bc0;
+        }
+        .actor-box.db {
+            background: #66bb6a;
+        }
+        .line {
+            width: 2px;
+            height: 400px;
+            background: #757575;
+            position: absolute;
+            top: 50px;
+        }
+        .message {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+            color: #e0e0e0;
+        }
+        .arrow-line {
+            width: 60px;
+            height: 2px;
+            background: #90caf9;
+            position: relative;
+        }
+        .arrow-line::after {
+            content: '▶';
+            position: absolute;
+            right: -8px;
+            top: -7px;
+            color: #90caf9;
+            font-size: 14px;
+        }
+        .arrow-line.reverse {
+            background: #81c784;
+        }
+        .arrow-line.reverse::after {
+            content: '◀';
+            left: -8px;
+            right: auto;
+            color: #81c784;
+        }
+        .msg-text {
+            max-width: 180px;
+            line-height: 1.3;
+        }
+        .step {
+            top: 80px;
+        }
+        .step2 { top: 130px; }
+        .step3 { top: 180px; }
+        .step4 { top: 230px; }
+        .step5 { top: 280px; }
+        .step6 { top: 330px; }
+        .section-divider {
+            border-top: 2px dashed #424242;
+            width: 100%;
+            margin: 20px 0;
+        }
+        .section-label {
+            color: #9e9e9e;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagram-container">
+        <div class="lifelines">
+            <div class="lifeline">
+                <div class="actor-box">User</div>
+                <div class="line"></div>
+            </div>
+            <div class="lifeline">
+                <div class="actor-box">Frontend</div>
+                <div class="line"></div>
+            </div>
+            <div class="lifeline">
+                <div class="actor-box api">API</div>
+                <div class="line"></div>
+            </div>
+            <div class="lifeline">
+                <div class="actor-box db">Database</div>
+                <div class="line"></div>
+            </div>
+        </div>
+        
+        <div class="message step">
+            <div class="msg-text">Click "Add Category"</div>
+            <div class="arrow-line"></div>
+        </div>
+        
+        <div class="message step2">
+            <div class="msg-text">POST /api/categories {title}</div>
+            <div class="arrow-line"></div>
+        </div>
+        
+        <div class="message step3">
+            <div class="msg-text">INSERT INTO todos</div>
+            <div class="arrow-line"></div>
+        </div>
+        
+        <div class="message step4">
+            <div class="msg-text">{id, title, type}</div>
+            <div class="arrow-line reverse"></div>
+        </div>
+        
+        <div class="message step5">
+            <div class="msg-text">201 Created</div>
+            <div class="arrow-line reverse"></div>
+        </div>
+        
+        <div class="message step6">
+            <div class="msg-text">Display new category</div>
+            <div class="arrow-line reverse"></div>
+        </div>
+        
+        <div class="section-divider"></div>
+        <div class="section-label">Then: Add todo under category (similar flow with parent_id)</div>
+    </div>
+</body>
+</html>

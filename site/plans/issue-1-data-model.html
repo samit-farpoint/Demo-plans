@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Model Diagram</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 40px;
+            margin: 0;
+        }
+        .diagram-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+        .table {
+            background: #2d2d2d;
+            border: 2px solid #3f51b5;
+            border-radius: 8px;
+            padding: 0;
+            min-width: 320px;
+            box-shadow: 0 4px 20px rgba(63, 81, 181, 0.3);
+        }
+        .table-header {
+            background: #3f51b5;
+            padding: 12px 20px;
+            font-weight: 600;
+            font-size: 16px;
+            border-radius: 6px 6px 0 0;
+            text-align: center;
+        }
+        .table-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            border-bottom: 1px solid #404040;
+            font-size: 14px;
+        }
+        .table-row:last-child {
+            border-bottom: none;
+            border-radius: 0 0 6px 6px;
+        }
+        .field-name {
+            font-weight: 500;
+            color: #90caf9;
+        }
+        .field-type {
+            color: #81c784;
+            font-family: 'Monaco', 'Consolas', monospace;
+        }
+        .field-pk {
+            color: #ffb74d;
+            font-size: 11px;
+            margin-left: 8px;
+        }
+        .field-fk {
+            color: #f06292;
+            font-size: 11px;
+            margin-left: 8px;
+        }
+        .relationship {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #9e9e9e;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        .arrow {
+            width: 60px;
+            height: 2px;
+            background: #757575;
+            position: relative;
+        }
+        .arrow::after {
+            content: '▼';
+            position: absolute;
+            right: -8px;
+            top: -9px;
+            color: #757575;
+            font-size: 16px;
+        }
+        .self-ref {
+            position: relative;
+            width: 200px;
+            height: 80px;
+            border: 2px dashed #757575;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .self-ref-text {
+            color: #9e9e9e;
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagram-container">
+        <div class="table">
+            <div class="table-header">todos</div>
+            <div class="table-row">
+                <span class="field-name">id <span class="field-pk">PK</span></span>
+                <span class="field-type">INTEGER</span>
+            </div>
+            <div class="table-row">
+                <span class="field-name">title</span>
+                <span class="field-type">TEXT</span>
+            </div>
+            <div class="table-row">
+                <span class="field-name">completed</span>
+                <span class="field-type">BOOLEAN</span>
+            </div>
+            <div class="table-row">
+                <span class="field-name">created_at</span>
+                <span class="field-type">DATETIME</span>
+            </div>
+            <div class="table-row">
+                <span class="field-name">parent_id <span class="field-fk">FK</span></span>
+                <span class="field-type">INTEGER</span>
+            </div>
+            <div class="table-row">
+                <span class="field-name">item_type</span>
+                <span class="field-type">TEXT</span>
+            </div>
+        </div>
+        
+        <div class="self-ref">
+            <span class="self-ref-text">parent_id references →<br>todos.id</span>
+        </div>
+    </div>
+</body>
+</html>
