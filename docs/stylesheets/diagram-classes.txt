@@ -1,0 +1,25 @@
+/* Diagram CSS Classes Reference */
+
+/* Container */
+.diagram-container { display: flex; flex-direction: column; align-items: center; padding: 20px; background: #1a1a1a; border-radius: 8px; }
+
+/* Nodes */
+.node { padding: 12px 24px; border-radius: 6px; font-weight: 500; text-align: center; min-width: 120px; }
+.node-primary { background: #3f51b5; color: white; }
+.node-secondary { background: #5c6bc0; color: white; }
+.node-accent { background: #ff4081; color: white; }
+.node-neutral { background: #424242; color: white; }
+.node-success { background: #4caf50; color: white; }
+.node-warning { background: #ff9800; color: white; }
+
+/* Connections */
+.connection { height: 2px; background: #757575; margin: 10px 0; }
+.arrow { position: relative; }
+.arrow::after { content: '▼'; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); color: #757575; }
+
+/* Layout helpers */
+.row { display: flex; gap: 20px; align-items: center; justify-content: center; flex-wrap: wrap; }
+.column { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+
+/* Labels */
+.label { font-size: 12px; color: #9e9e9e; margin-top: 4px; }
