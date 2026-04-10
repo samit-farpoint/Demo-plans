@@ -1,15 +1,16 @@
 site_name: Implementation Plans
-site_url: ""
+site_url: ''
 theme:
   name: material
   palette:
     scheme: slate
     primary: indigo
 plugins:
-  - glightbox
+- glightbox
 nav:
-  - Home: index.md
-  - Plans:
-    - "Issue #1 - Add subcategory support": plans/issue-1-plan.md
+- Home: index.md
+- Plans:
+  - 'Issue #1 - Add subcategory support': plans/issue-1-plan.md
+  - 'Issue #2 - Add sub-categories support': plans/issue-2-plan.md
 extra_css:
-  - stylesheets/extra.css
+- stylesheets/extra.css
