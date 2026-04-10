@@ -6,10 +6,8 @@
       
       
       
-        <link rel="prev" href="../issue-1-plan/">
+        <link rel="prev" href="../issue-2-plan/">
       
-      
-        <link rel="next" href="../issue-3-plan/">
       
       
         
@@ -20,7 +18,7 @@
     
     
       
-        <title>Issue #2 - Add sub-categories support - Implementation Plans</title>
+        <title>Issue #3 - Implement drag-and-drop list reordering - Implementation Plans</title>
       
     
     
@@ -81,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#issue-2-add-sub-categories-support-for-todos" class="md-skip">
+        <a href="#issue-3-implement-drag-and-drop-list-reordering" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Issue #2 - Add sub-categories support
+              Issue #3 - Implement drag-and-drop list reordering
             
           </span>
         </div>
@@ -274,6 +272,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-2-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Issue #2 - Add sub-categories support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -293,7 +319,7 @@
   <span class="md-ellipsis">
     
   
-    Issue #2 - Add sub-categories support
+    Issue #3 - Implement drag-and-drop list reordering
   
 
     
@@ -311,7 +337,7 @@
   <span class="md-ellipsis">
     
   
-    Issue #2 - Add sub-categories support
+    Issue #3 - Implement drag-and-drop list reordering
   
 
     
@@ -367,23 +393,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Proposed Solution">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-design-decisions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key Design Decisions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -394,6 +403,34 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Files to Modify">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frontend-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend (client/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend (server/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -421,10 +458,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#phase-1-database-schema-backend" class="md-nav__link">
+  <a href="#phase-1-database-schema-update" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 1: Database Schema (Backend)
+        Phase 1: Database Schema Update
       
     </span>
   </a>
@@ -443,10 +480,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-3-frontend-types-api" class="md-nav__link">
+  <a href="#phase-3-frontend-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 3: Frontend Types &amp; API
+        Phase 3: Frontend Setup
       
     </span>
   </a>
@@ -454,10 +491,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-4-frontend-ui-components" class="md-nav__link">
+  <a href="#phase-4-component-updates" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 4: Frontend UI Components
+        Phase 4: Component Updates
       
     </span>
   </a>
@@ -465,10 +502,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-5-testing-validation" class="md-nav__link">
+  <a href="#phase-5-testing-polish" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 5: Testing &amp; Validation
+        Phase 5: Testing &amp; Polish
       
     </span>
   </a>
@@ -493,21 +530,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#unit-tests-backend" class="md-nav__link">
+  <a href="#unit-tests" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Unit Tests (Backend)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unit-tests-frontend" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Unit Tests (Frontend)
+        Unit Tests
       
     </span>
   </a>
@@ -565,10 +591,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#architecture-diagram" class="md-nav__link">
+  <a href="#architecture-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Architecture Diagram
+        Architecture Flow
       
     </span>
   </a>
@@ -576,10 +602,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#database-schema" class="md-nav__link">
+  <a href="#component-hierarchy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Database Schema
+        Component Hierarchy
       
     </span>
   </a>
@@ -587,21 +613,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#category-hierarchy-flow" class="md-nav__link">
+  <a href="#drag-and-drop-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Category Hierarchy Flow
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#api-request-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        API Request Flow
+        Drag-and-Drop Flow
       
     </span>
   </a>
@@ -614,44 +629,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ui-mockups" class="md-nav__link">
+  <a href="#api-specification" class="md-nav__link">
     <span class="md-ellipsis">
       
-        UI Mockups
+        API Specification
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="UI Mockups">
+    <nav class="md-nav" aria-label="API Specification">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#category-manager-component" class="md-nav__link">
+  <a href="#new-endpoint-put-apitodosreorder" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Category Manager Component
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#category-filter-dropdown" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Category Filter Dropdown
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#todo-item-with-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Todo Item with Category
+        New Endpoint: PUT /api/todos/reorder
       
     </span>
   </a>
@@ -664,24 +657,80 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#acceptance-criteria" class="md-nav__link">
+  <a href="#database-schema-changes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Acceptance Criteria
+        Database Schema Changes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Schema Changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#out-of-scope-future-enhancements" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#after" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Out of Scope (Future Enhancements)
+        After
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visual Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drag-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drag States
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drag-handle-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drag Handle Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -689,34 +738,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../issue-3-plan/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Issue #3 - Implement drag-and-drop list reordering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -786,23 +807,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Proposed Solution">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-design-decisions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key Design Decisions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -813,6 +817,34 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Files to Modify">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frontend-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend (client/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend (server/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -840,10 +872,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#phase-1-database-schema-backend" class="md-nav__link">
+  <a href="#phase-1-database-schema-update" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 1: Database Schema (Backend)
+        Phase 1: Database Schema Update
       
     </span>
   </a>
@@ -862,10 +894,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-3-frontend-types-api" class="md-nav__link">
+  <a href="#phase-3-frontend-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 3: Frontend Types &amp; API
+        Phase 3: Frontend Setup
       
     </span>
   </a>
@@ -873,10 +905,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-4-frontend-ui-components" class="md-nav__link">
+  <a href="#phase-4-component-updates" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 4: Frontend UI Components
+        Phase 4: Component Updates
       
     </span>
   </a>
@@ -884,10 +916,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-5-testing-validation" class="md-nav__link">
+  <a href="#phase-5-testing-polish" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 5: Testing &amp; Validation
+        Phase 5: Testing &amp; Polish
       
     </span>
   </a>
@@ -912,21 +944,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#unit-tests-backend" class="md-nav__link">
+  <a href="#unit-tests" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Unit Tests (Backend)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unit-tests-frontend" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Unit Tests (Frontend)
+        Unit Tests
       
     </span>
   </a>
@@ -984,10 +1005,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#architecture-diagram" class="md-nav__link">
+  <a href="#architecture-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Architecture Diagram
+        Architecture Flow
       
     </span>
   </a>
@@ -995,10 +1016,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#database-schema" class="md-nav__link">
+  <a href="#component-hierarchy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Database Schema
+        Component Hierarchy
       
     </span>
   </a>
@@ -1006,21 +1027,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#category-hierarchy-flow" class="md-nav__link">
+  <a href="#drag-and-drop-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Category Hierarchy Flow
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#api-request-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        API Request Flow
+        Drag-and-Drop Flow
       
     </span>
   </a>
@@ -1033,44 +1043,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ui-mockups" class="md-nav__link">
+  <a href="#api-specification" class="md-nav__link">
     <span class="md-ellipsis">
       
-        UI Mockups
+        API Specification
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="UI Mockups">
+    <nav class="md-nav" aria-label="API Specification">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#category-manager-component" class="md-nav__link">
+  <a href="#new-endpoint-put-apitodosreorder" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Category Manager Component
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#category-filter-dropdown" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Category Filter Dropdown
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#todo-item-with-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Todo Item with Category
+        New Endpoint: PUT /api/todos/reorder
       
     </span>
   </a>
@@ -1083,24 +1071,80 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#acceptance-criteria" class="md-nav__link">
+  <a href="#database-schema-changes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Acceptance Criteria
+        Database Schema Changes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Schema Changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#out-of-scope-future-enhancements" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#after" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Out of Scope (Future Enhancements)
+        After
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visual Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drag-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drag States
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drag-handle-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drag Handle Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1121,30 +1165,33 @@
 
 
 
-<h1 id="issue-2-add-sub-categories-support-for-todos">Issue #2: Add sub-categories support for todos</h1>
+<h1 id="issue-3-implement-drag-and-drop-list-reordering">Issue #3: Implement drag-and-drop list reordering</h1>
 <h2 id="summary">Summary</h2>
-<p>Implement a hierarchical category system that allows users to organize todos into categories and sub-categories with unlimited nesting depth, enabling better task organization by project, context, or priority.</p>
+<p>Implement drag-and-drop functionality to reorder todos in the list using @dnd-kit library, with visual feedback during drag operations and persistence to the backend.</p>
 <h2 id="root-cause-analysis">Root Cause Analysis</h2>
 <p><strong>Current State:</strong>
-- Todos can only be organized by completion status and creation date
-- No categorization or grouping mechanism exists
-- Users cannot organize related tasks together</p>
+- Todos are displayed in a fixed order (by <code>created_at DESC</code>)
+- No mechanism to reorder items in the list
+- Users cannot customize the display order of their todos</p>
 <p><strong>Desired State:</strong>
-- Users can create categories with optional parent-child relationships
-- Todos can be assigned to any category level
-- Category hierarchy is visually clear in the UI
-- Filtering by category includes sub-categories</p>
+- Users can drag and drop todo items to reorder them
+- Visual feedback shows drag state and drop positions
+- New order persists to the backend
+- Order is maintained across page reloads</p>
 <h2 id="proposed-solution">Proposed Solution</h2>
-<p>Implement a self-referential categories table with foreign key relationships, add category assignment to todos, and update the UI to support category management and filtering.</p>
-<h3 id="key-design-decisions">Key Design Decisions</h3>
-<ol>
-<li><strong>Unlimited nesting depth</strong> - Parent-child relationships via <code>parent_id</code> foreign key</li>
-<li><strong>Optional categorization</strong> - Todos can exist without categories (nullable <code>category_id</code>)</li>
-<li><strong>Cascade deletes</strong> - Deleting a category reassigns child categories to null or deletes them (configurable)</li>
-<li><strong>Color coding</strong> - Optional color field for visual distinction</li>
-<li><strong>Circular reference prevention</strong> - Validation to prevent categories from being their own ancestors</li>
-</ol>
+<p>Implement drag-and-drop using the <code>@dnd-kit</code> library, which provides:
+- Modern, accessible drag-and-drop primitives
+- Smooth animations and visual feedback
+- Touch and keyboard support
+- Lightweight bundle size</p>
+<p>The solution involves:
+1. Adding an <code>order</code> field to the Todo type and database
+2. Wrapping the TodoList with dnd-kit's <code>DndContext</code> and <code>SortableContext</code>
+3. Making TodoItem components draggable with visual drag handles
+4. Implementing <code>onDragEnd</code> handler to update order state
+5. Creating a backend endpoint to persist order changes</p>
 <h2 id="files-to-modify">Files to Modify</h2>
+<h3 id="frontend-client">Frontend (client/)</h3>
 <table>
 <thead>
 <tr>
@@ -1154,32 +1201,47 @@
 </thead>
 <tbody>
 <tr>
-<td><code>server/src/db/database.ts</code></td>
-<td>Add categories table schema, add category_id to todos</td>
-</tr>
-<tr>
-<td><code>server/src/routes/todos.ts</code></td>
-<td>Add category_id to todo responses, add category filtering</td>
-</tr>
-<tr>
 <td><code>client/src/types/todo.ts</code></td>
-<td>Add categoryId to Todo interface</td>
-</tr>
-<tr>
-<td><code>client/src/api/todoApi.ts</code></td>
-<td>Add category filtering parameter to fetchTodos</td>
-</tr>
-<tr>
-<td><code>client/src/App.tsx</code></td>
-<td>Add category management UI, category filter dropdown</td>
+<td>Add <code>order: number</code> field to Todo interface</td>
 </tr>
 <tr>
 <td><code>client/src/components/TodoList.tsx</code></td>
-<td>Display category badges on todos</td>
+<td>Wrap with DndContext and SortableContext, add onDragEnd handler</td>
 </tr>
 <tr>
 <td><code>client/src/components/TodoItem.tsx</code></td>
-<td>Show category assignment, add category selector</td>
+<td>Make draggable with useSortable hook, add drag handle</td>
+</tr>
+<tr>
+<td><code>client/src/App.tsx</code></td>
+<td>Add handleReorder function, pass to TodoList</td>
+</tr>
+<tr>
+<td><code>client/src/api/todoApi.ts</code></td>
+<td>Add <code>reorderTodos(ids: number[])</code> function</td>
+</tr>
+<tr>
+<td><code>client/package.json</code></td>
+<td>Add @dnd-kit/core and @dnd-kit/sortable dependencies</td>
+</tr>
+</tbody>
+</table>
+<h3 id="backend-server">Backend (server/)</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>server/src/routes/todos.ts</code></td>
+<td>Add PUT /todos/reorder endpoint, modify GET to order by <code>order</code> field</td>
+</tr>
+<tr>
+<td><code>server/src/db/database.js</code></td>
+<td>Add <code>order</code> column to todos table schema</td>
 </tr>
 </tbody>
 </table>
@@ -1193,206 +1255,98 @@
 </thead>
 <tbody>
 <tr>
-<td><code>server/src/routes/categories.ts</code></td>
-<td>Category CRUD API endpoints</td>
-</tr>
-<tr>
-<td><code>client/src/types/category.ts</code></td>
-<td>TypeScript types for categories</td>
-</tr>
-<tr>
-<td><code>client/src/api/categoryApi.ts</code></td>
-<td>API client for category operations</td>
-</tr>
-<tr>
-<td><code>client/src/components/CategoryManager.tsx</code></td>
-<td>UI for creating/editing/deleting categories</td>
-</tr>
-<tr>
-<td><code>client/src/components/CategoryFilter.tsx</code></td>
-<td>Dropdown to filter todos by category</td>
-</tr>
-<tr>
-<td><code>client/src/components/CategoryBadge.tsx</code></td>
-<td>Visual category indicator with color</td>
-</tr>
-<tr>
-<td><code>client/src/utils/categoryUtils.ts</code></td>
-<td>Helper functions for category hierarchy</td>
+<td><code>client/src/components/DragHandle.tsx</code></td>
+<td>Reusable drag handle component with visual indicator</td>
 </tr>
 </tbody>
 </table>
 <h2 id="implementation-steps">Implementation Steps</h2>
-<h3 id="phase-1-database-schema-backend">Phase 1: Database Schema (Backend)</h3>
+<h3 id="phase-1-database-schema-update">Phase 1: Database Schema Update</h3>
 <ol>
-<li>
-<p>Create <code>categories</code> table migration:
-   <code>sql
-   CREATE TABLE categories (
-     id INTEGER PRIMARY KEY AUTOINCREMENT,
-     name TEXT NOT NULL,
-     parent_id INTEGER,
-     color TEXT,
-     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-     FOREIGN KEY (parent_id) REFERENCES categories(id) ON DELETE SET NULL
-   );</code></p>
-</li>
-<li>
-<p>Add <code>category_id</code> column to <code>todos</code> table:
-   <code>sql
-   ALTER TABLE todos ADD COLUMN category_id INTEGER;
-   ALTER TABLE todos ADD FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL;</code></p>
-</li>
-<li>
-<p>Create index for efficient filtering:
-   <code>sql
-   CREATE INDEX idx_todos_category_id ON todos(category_id);</code></p>
-</li>
+<li>Add <code>order INTEGER</code> column to todos table in database schema</li>
+<li>Update existing todos with order based on created_at (reverse chronological)</li>
+<li>Modify GET /todos query to ORDER BY <code>order ASC</code></li>
 </ol>
 <h3 id="phase-2-backend-api">Phase 2: Backend API</h3>
 <ol>
-<li>Create category routes (<code>server/src/routes/categories.ts</code>):</li>
-<li><code>GET /api/categories</code> - List all categories (with hierarchy info)</li>
-<li><code>POST /api/categories</code> - Create new category</li>
-<li><code>PUT /api/categories/:id</code> - Update category</li>
-<li><code>DELETE /api/categories/:id</code> - Delete category (cascade handling)</li>
-<li>
-<p><code>GET /api/categories/:id/children</code> - Get child categories</p>
-</li>
-<li>
-<p>Update todo routes to support categories:</p>
-</li>
-<li>Add <code>category_id</code> to todo creation</li>
-<li>Add <code>category_id</code> to todo update</li>
-<li>Add <code>?category_id=X</code> query parameter for filtering</li>
-<li>
-<p>Include category info in todo responses (JOIN)</p>
-</li>
-<li>
-<p>Implement circular reference validation:</p>
-</li>
-<li>Prevent setting parent_id to self</li>
-<li>Prevent setting parent_id to any descendant</li>
+<li>Add PUT /todos/reorder endpoint that accepts <code>{ ids: number[] }</code></li>
+<li>Implement transaction to update order for all todos in a single operation</li>
+<li>Return updated todos array</li>
 </ol>
-<h3 id="phase-3-frontend-types-api">Phase 3: Frontend Types &amp; API</h3>
+<h3 id="phase-3-frontend-setup">Phase 3: Frontend Setup</h3>
 <ol>
-<li>
-<p>Create category TypeScript types (<code>client/src/types/category.ts</code>):
-   <code>typescript
-   interface Category {
-     id: number;
-     name: string;
-     parent_id: number | null;
-     color: string | null;
-     created_at: string;
-     children?: Category[];
-   }</code></p>
-</li>
-<li>
-<p>Create category API client (<code>client/src/api/categoryApi.ts</code>):</p>
-</li>
-<li>fetchCategories(), createCategory(), updateCategory(), deleteCategory()</li>
-<li>
-<p>Helper to build category tree from flat list</p>
-</li>
-<li>
-<p>Update todo types and API to include categoryId</p>
-</li>
+<li>Install @dnd-kit/core and @dnd-kit/sortable packages</li>
+<li>Update Todo type to include <code>order: number</code> field</li>
+<li>Add <code>reorderTodos</code> function to todoApi.ts</li>
 </ol>
-<h3 id="phase-4-frontend-ui-components">Phase 4: Frontend UI Components</h3>
+<h3 id="phase-4-component-updates">Phase 4: Component Updates</h3>
 <ol>
-<li>
-<p>Create CategoryBadge component - displays category name with color background</p>
-</li>
-<li>
-<p>Create CategoryManager component:</p>
-<ul>
-<li>List categories in tree view</li>
-<li>Add/Edit/Delete category forms</li>
-<li>Parent category selector (with indentation for hierarchy)</li>
-<li>Color picker</li>
-</ul>
-</li>
-<li>
-<p>Create CategoryFilter component:</p>
-<ul>
-<li>Dropdown with category tree</li>
-<li>"All Categories" option</li>
-<li>Visual indentation for sub-categories</li>
-</ul>
-</li>
-<li>
-<p>Update TodoItem:</p>
-<ul>
-<li>Display category badge</li>
-<li>Category selector dropdown</li>
-<li>Inherit parent category color styling</li>
-</ul>
-</li>
-<li>
-<p>Update TodoList:</p>
-<ul>
-<li>Group todos by category (optional view mode)</li>
-<li>Show category headers</li>
-</ul>
-</li>
-<li>
-<p>Update App.tsx:</p>
-<ul>
-<li>Integrate CategoryManager</li>
-<li>Add category filter to todo list</li>
-<li>Add "uncategorized" filter option</li>
-</ul>
-</li>
+<li>Create DragHandle component with grip icon</li>
+<li>Update TodoItem to use useSortable hook</li>
+<li>Wrap TodoList items with SortableContext</li>
+<li>Implement onDragEnd handler in App.tsx</li>
+<li>Add visual feedback styles for dragging state</li>
 </ol>
-<h3 id="phase-5-testing-validation">Phase 5: Testing &amp; Validation</h3>
+<h3 id="phase-5-testing-polish">Phase 5: Testing &amp; Polish</h3>
 <ol>
-<li>
-<p>Write backend tests for category API endpoints</p>
-</li>
-<li>
-<p>Test circular reference prevention</p>
-</li>
-<li>
-<p>Test cascade delete behavior</p>
-</li>
-<li>
-<p>Test frontend category management UI</p>
-</li>
-<li>
-<p>Test category filtering with nested categories</p>
-</li>
+<li>Test drag-and-drop on desktop (mouse)</li>
+<li>Test on touch devices</li>
+<li>Test keyboard accessibility</li>
+<li>Verify order persists after page reload</li>
+<li>Add loading states during reorder operation</li>
 </ol>
 <h2 id="test-strategy">Test Strategy</h2>
-<h3 id="unit-tests-backend">Unit Tests (Backend)</h3>
+<h3 id="unit-tests">Unit Tests</h3>
 <ul>
-<li><strong>Category CRUD</strong>: Create, read, update, delete operations</li>
-<li><strong>Hierarchy</strong>: Parent-child relationships, unlimited depth</li>
-<li><strong>Circular reference</strong>: Prevent self-parent, prevent descendant-as-parent</li>
-<li><strong>Cascade delete</strong>: Verify child categories handled correctly</li>
-<li><strong>Todo-category association</strong>: Assign, reassign, remove categories</li>
-</ul>
-<h3 id="unit-tests-frontend">Unit Tests (Frontend)</h3>
-<ul>
-<li><strong>Category tree building</strong>: Convert flat list to nested structure</li>
-<li><strong>Category badge rendering</strong>: Color and name display</li>
-<li><strong>Filter functionality</strong>: Correct todos shown for selected category</li>
+<li><strong>DragHandle component</strong>: Renders correctly, applies correct styles</li>
+<li><strong>reorderTodos API function</strong>: Sends correct request format</li>
+<li><strong>Backend reorder endpoint</strong>: Updates order correctly, handles invalid IDs</li>
 </ul>
 <h3 id="integration-tests">Integration Tests</h3>
 <ul>
-<li><strong>Full workflow</strong>: Create category → assign todo → filter by category</li>
-<li><strong>Nested categories</strong>: Create parent → child → grandchild → assign todo to grandchild → filter by parent (should include todo)</li>
-<li><strong>Delete cascade</strong>: Delete parent category → verify children handling</li>
+<li><strong>Drag and drop flow</strong>: Drag item from position 1 to position 3, verify swap</li>
+<li><strong>Persistence</strong>: Reorder items, reload page, verify order maintained</li>
+<li><strong>Multiple reorders</strong>: Perform multiple drag operations, verify final order correct</li>
 </ul>
 <h3 id="edge-cases">Edge Cases</h3>
-<ul>
-<li><strong>Empty categories</strong>: Categories with no todos</li>
-<li><strong>Deep nesting</strong>: 5+ levels of sub-categories</li>
-<li><strong>Orphaned todos</strong>: Todos whose category was deleted</li>
-<li><strong>Circular reference attempts</strong>: Various invalid parent assignments</li>
-<li><strong>Duplicate names</strong>: Same name in different branches (allowed) vs same parent (should warn)</li>
-<li><strong>Color validation</strong>: Invalid color codes</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Edge Case</th>
+<th>Expected Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drag first item to last</td>
+<td>Item moves to end, others shift up</td>
+</tr>
+<tr>
+<td>Drag last item to first</td>
+<td>Item moves to start, others shift down</td>
+</tr>
+<tr>
+<td>Drag item to same position</td>
+<td>No change, no API call</td>
+</tr>
+<tr>
+<td>Network failure during reorder</td>
+<td>Show error, revert to previous order</td>
+</tr>
+<tr>
+<td>Concurrent reorders (multiple tabs)</td>
+<td>Last write wins (optimistic UI update)</td>
+</tr>
+<tr>
+<td>Empty list</td>
+<td>No drag-and-drop available</td>
+</tr>
+<tr>
+<td>Single item</td>
+<td>No drag-and-drop available</td>
+</tr>
+</tbody>
+</table>
 <h2 id="risks-mitigations">Risks &amp; Mitigations</h2>
 <table>
 <thead>
@@ -1403,130 +1357,90 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Circular references in category hierarchy</strong></td>
-<td>Implement validation function that checks all ancestors before allowing parent_id change</td>
+<td>@dnd-kit bundle size increases load time</td>
+<td>Library is lightweight (~10kb gzipped), acceptable tradeoff</td>
 </tr>
 <tr>
-<td><strong>Performance with deep nesting</strong></td>
-<td>Add database indexes, limit practical depth to 10 levels in UI, cache category tree</td>
+<td>Touch device compatibility issues</td>
+<td>@dnd-kit has built-in touch support, test on mobile</td>
 </tr>
 <tr>
-<td><strong>Migration data loss</strong></td>
-<td>Use ALTER TABLE with DEFAULT NULL, existing todos remain uncategorized</td>
+<td>Database migration breaks existing data</td>
+<td>Use ALTER TABLE with DEFAULT value, backfill existing rows</td>
 </tr>
 <tr>
-<td><strong>UI complexity for category selection</strong></td>
-<td>Use indented dropdown with visual hierarchy, search functionality for large category lists</td>
+<td>Reorder API called too frequently</td>
+<td>Implement debouncing or only call on drag end</td>
 </tr>
 <tr>
-<td><strong>Delete cascade confusion</strong></td>
-<td>Show confirmation dialog with list of affected child categories and todos before deleting</td>
+<td>Visual feedback not clear enough</td>
+<td>Add ghost item, drop indicator, and smooth animations</td>
 </tr>
 <tr>
-<td><strong>Color accessibility</strong></td>
-<td>Provide preset color palette with sufficient contrast, allow custom colors with validation</td>
+<td>Keyboard users can't reorder</td>
+<td>@dnd-kit supports keyboard navigation out of the box</td>
 </tr>
 </tbody>
 </table>
 <h2 id="diagrams">Diagrams</h2>
-<h3 id="architecture-diagram">Architecture Diagram</h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../issue-2-architecture.png" data-desc-position="bottom"><img alt="Architecture Diagram" src="../issue-2-architecture.png"></a></p>
-<h3 id="database-schema">Database Schema</h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../issue-2-database.png" data-desc-position="bottom"><img alt="Database Schema" src="../issue-2-database.png"></a></p>
-<h3 id="category-hierarchy-flow">Category Hierarchy Flow</h3>
-<pre><code class="language-mermaid">graph TD
-    Root[Root Category] --&gt; Child1[Child Category 1]
-    Root --&gt; Child2[Child Category 2]
-    Child1 --&gt; Grandchild1[Grandchild 1]
-    Child1 --&gt; Grandchild2[Grandchild 2]
-    Grandchild1 --&gt; Todo1[Todo A]
-    Grandchild1 --&gt; Todo2[Todo B]
-    Child2 --&gt; Todo3[Todo C]
-    Root --&gt; Todo4[Todo D - Direct]
-
-    style Root fill:#3f51b5,color:#fff
-    style Child1 fill:#5c6bc0,color:#fff
-    style Child2 fill:#5c6bc0,color:#fff
-    style Grandchild1 fill:#7986cb,color:#fff
-    style Grandchild2 fill:#7986cb,color:#fff
-    style Todo1 fill:#4caf50,color:#fff
-    style Todo2 fill:#4caf50,color:#fff
-    style Todo3 fill:#4caf50,color:#fff
-    style Todo4 fill:#4caf50,color:#fff
+<h3 id="architecture-flow">Architecture Flow</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../issue-3-architecture.png" data-desc-position="bottom"><img alt="Architecture Diagram" src="../issue-3-architecture.png"></a></p>
+<h3 id="component-hierarchy">Component Hierarchy</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../issue-3-components.png" data-desc-position="bottom"><img alt="Component Diagram" src="../issue-3-components.png"></a></p>
+<h3 id="drag-and-drop-flow">Drag-and-Drop Flow</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../issue-3-flow.png" data-desc-position="bottom"><img alt="Flow Diagram" src="../issue-3-flow.png"></a></p>
+<h2 id="api-specification">API Specification</h2>
+<h3 id="new-endpoint-put-apitodosreorder">New Endpoint: PUT /api/todos/reorder</h3>
+<p><strong>Request:</strong></p>
+<pre><code class="language-json">{
+  "ids": [3, 1, 4, 2]
+}
 </code></pre>
-<h3 id="api-request-flow">API Request Flow</h3>
-<pre><code class="language-mermaid">sequenceDiagram
-    participant U as User
-    participant UI as React UI
-    participant API as Express API
-    participant DB as SQLite
-
-    U-&gt;&gt;UI: Create Category
-    UI-&gt;&gt;API: POST /api/categories
-    API-&gt;&gt;DB: INSERT INTO categories
-    DB--&gt;&gt;API: New category ID
-    API--&gt;&gt;UI: Created category
-    UI--&gt;&gt;U: Show in tree
-
-    U-&gt;&gt;UI: Assign Todo to Category
-    UI-&gt;&gt;API: PUT /api/todos/:id
-    API-&gt;&gt;DB: UPDATE todos SET category_id
-    DB--&gt;&gt;API: Updated todo
-    API--&gt;&gt;UI: Todo with category
-    UI--&gt;&gt;U: Show category badge
-
-    U-&gt;&gt;UI: Filter by Category
-    UI-&gt;&gt;API: GET /api/todos?category_id=X
-    API-&gt;&gt;DB: SELECT with JOIN + subcategories
-    DB--&gt;&gt;API: Filtered todos
-    API--&gt;&gt;UI: Filtered list
-    UI--&gt;&gt;U: Display filtered todos
+<p><strong>Response (200 OK):</strong></p>
+<pre><code class="language-json">[
+  { "id": 3, "title": "Task C", "completed": false, "order": 1, "createdAt": "..." },
+  { "id": 1, "title": "Task A", "completed": false, "order": 2, "createdAt": "..." },
+  { "id": 4, "title": "Task D", "completed": true, "order": 3, "createdAt": "..." },
+  { "id": 2, "title": "Task B", "completed": false, "order": 4, "createdAt": "..." }
+]
 </code></pre>
-<h2 id="ui-mockups">UI Mockups</h2>
-<h3 id="category-manager-component">Category Manager Component</h3>
-<p>The CategoryManager will display:
-- Tree view of categories with expand/collapse
-- Add category button (with parent selector)
-- Edit/Delete actions per category
-- Color picker for each category
-- Drag-and-drop reordering (future enhancement)</p>
-<h3 id="category-filter-dropdown">Category Filter Dropdown</h3>
+<p><strong>Error Responses:</strong>
+- 400 Bad Request: Invalid ids array format
+- 500 Internal Server Error: Database error</p>
+<h2 id="database-schema-changes">Database Schema Changes</h2>
+<h3 id="before">Before</h3>
+<pre><code class="language-sql">CREATE TABLE todos (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL,
+  completed INTEGER DEFAULT 0,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+</code></pre>
+<h3 id="after">After</h3>
+<pre><code class="language-sql">CREATE TABLE todos (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL,
+  completed INTEGER DEFAULT 0,
+  order INTEGER NOT NULL DEFAULT 0,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Index for faster ordering
+CREATE INDEX idx_todos_order ON todos(order);
+</code></pre>
+<h2 id="visual-design">Visual Design</h2>
+<h3 id="drag-states">Drag States</h3>
+<ol>
+<li><strong>Default</strong>: Normal todo item appearance</li>
+<li><strong>Dragging</strong>: Slightly elevated, increased shadow, reduced opacity</li>
+<li><strong>Drop Target</strong>: Highlighted border, slight scale up</li>
+<li><strong>Drag Handle</strong>: Visible grip icon on hover/focus</li>
+</ol>
+<h3 id="drag-handle-design">Drag Handle Design</h3>
 <ul>
-<li>"All Categories" at top</li>
-<li>Indented category list showing hierarchy</li>
-<li>Visual color indicators</li>
-<li>Badge showing todo count per category (future)</li>
-</ul>
-<h3 id="todo-item-with-category">Todo Item with Category</h3>
-<ul>
-<li>Category badge displayed next to todo title</li>
-<li>Badge shows category color</li>
-<li>Click badge to filter by that category</li>
-<li>Dropdown to change category assignment</li>
-</ul>
-<h2 id="acceptance-criteria">Acceptance Criteria</h2>
-<ul>
-<li>[x] Users can create, edit, and delete categories</li>
-<li>[x] Categories can have parent-child relationships (unlimited depth)</li>
-<li>[x] Todos can be assigned to any category</li>
-<li>[x] Todos can be filtered by category (including sub-categories)</li>
-<li>[x] UI clearly displays category hierarchy</li>
-<li>[x] Existing todos remain functional without categories</li>
-<li>[x] Database migration preserves existing data</li>
-<li>[ ] Circular reference prevention implemented</li>
-<li>[ ] Category filtering includes sub-categories recursively</li>
-<li>[ ] Delete confirmation shows affected items</li>
-</ul>
-<h2 id="out-of-scope-future-enhancements">Out of Scope (Future Enhancements)</h2>
-<ul>
-<li>Category templates</li>
-<li>Shared categories across users (if multi-user support added)</li>
-<li>Category-based notifications or reminders</li>
-<li>Category statistics and insights</li>
-<li>Drag-and-drop category reordering</li>
-<li>Bulk category assignment for multiple todos</li>
-<li>Category color presets and themes</li>
-<li>Export/import category structures</li>
+<li>Three horizontal lines (≡) on the left side of each todo item</li>
+<li>Visible on hover for desktop, always visible for touch</li>
+<li>Cursor changes to <code>grab</code> / <code>grabbing</code> during drag</li>
 </ul>
 
 
