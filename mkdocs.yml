@@ -10,6 +10,6 @@ plugins:
 nav:
   - Home: index.md
   - Plans:
-    - "(Plans will appear here)": plans/.gitkeep
+    - "Issue #1 - Add subcategory support": plans/issue-1-plan.md
 extra_css:
   - stylesheets/extra.css
