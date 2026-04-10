@@ -6,10 +6,8 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../issue-1-plan/">
       
-      
-        <link rel="next" href="../issue-2-plan/">
       
       
         
@@ -20,7 +18,7 @@
     
     
       
-        <title>Issue #1 - Add subcategory support - Implementation Plans</title>
+        <title>Issue #2 - Add sub-categories support - Implementation Plans</title>
       
     
     
@@ -81,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#issue-1-add-subcategory-support-to-todo-items" class="md-skip">
+        <a href="#issue-2-add-sub-categories-support-for-todos" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Issue #1 - Add subcategory support
+              Issue #2 - Add sub-categories support
             
           </span>
         </div>
@@ -246,6 +244,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../issue-1-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Issue #1 - Add subcategory support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -265,7 +291,7 @@
   <span class="md-ellipsis">
     
   
-    Issue #1 - Add subcategory support
+    Issue #2 - Add sub-categories support
   
 
     
@@ -283,7 +309,7 @@
   <span class="md-ellipsis">
     
   
-    Issue #1 - Add subcategory support
+    Issue #2 - Add sub-categories support
   
 
     
@@ -339,6 +365,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Proposed Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-design-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Design Decisions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -376,10 +419,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#phase-1-database-changes" class="md-nav__link">
+  <a href="#phase-1-database-schema-backend" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 1: Database Changes
+        Phase 1: Database Schema (Backend)
       
     </span>
   </a>
@@ -387,10 +430,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-2-backend-api-changes" class="md-nav__link">
+  <a href="#phase-2-backend-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 2: Backend API Changes
+        Phase 2: Backend API
       
     </span>
   </a>
@@ -398,10 +441,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-3-frontend-type-changes" class="md-nav__link">
+  <a href="#phase-3-frontend-types-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 3: Frontend Type Changes
+        Phase 3: Frontend Types &amp; API
       
     </span>
   </a>
@@ -409,10 +452,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-4-frontend-api-changes" class="md-nav__link">
+  <a href="#phase-4-frontend-ui-components" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 4: Frontend API Changes
+        Phase 4: Frontend UI Components
       
     </span>
   </a>
@@ -420,21 +463,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-5-ui-components" class="md-nav__link">
+  <a href="#phase-5-testing-validation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 5: UI Components
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#phase-6-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Phase 6: Integration
+        Phase 5: Testing &amp; Validation
       
     </span>
   </a>
@@ -459,10 +491,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#unit-tests" class="md-nav__link">
+  <a href="#unit-tests-backend" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Unit Tests
+        Unit Tests (Backend)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unit-tests-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unit Tests (Frontend)
       
     </span>
   </a>
@@ -520,10 +563,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-model" class="md-nav__link">
+  <a href="#architecture-diagram" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data Model
+        Architecture Diagram
       
     </span>
   </a>
@@ -531,10 +574,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#api-flow-create-category-with-child-todo" class="md-nav__link">
+  <a href="#database-schema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        API Flow - Create Category with Child Todo
+        Database Schema
       
     </span>
   </a>
@@ -542,10 +585,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#component-hierarchy" class="md-nav__link">
+  <a href="#category-hierarchy-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Component Hierarchy
+        Category Hierarchy Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-request-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Request Flow
       
     </span>
   </a>
@@ -570,10 +624,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#category-visual-design" class="md-nav__link">
+  <a href="#category-manager-component" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Category Visual Design
+        Category Manager Component
       
     </span>
   </a>
@@ -581,10 +635,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#visual-states" class="md-nav__link">
+  <a href="#category-filter-dropdown" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Visual States
+        Category Filter Dropdown
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#todo-item-with-category" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Todo Item with Category
       
     </span>
   </a>
@@ -608,10 +673,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#future-enhancements" class="md-nav__link">
+  <a href="#out-of-scope-future-enhancements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Future Enhancements
+        Out of Scope (Future Enhancements)
       
     </span>
   </a>
@@ -622,34 +687,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../issue-2-plan/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Issue #2 - Add sub-categories support
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -719,6 +756,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Proposed Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-design-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Design Decisions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -756,10 +810,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#phase-1-database-changes" class="md-nav__link">
+  <a href="#phase-1-database-schema-backend" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 1: Database Changes
+        Phase 1: Database Schema (Backend)
       
     </span>
   </a>
@@ -767,10 +821,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-2-backend-api-changes" class="md-nav__link">
+  <a href="#phase-2-backend-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 2: Backend API Changes
+        Phase 2: Backend API
       
     </span>
   </a>
@@ -778,10 +832,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-3-frontend-type-changes" class="md-nav__link">
+  <a href="#phase-3-frontend-types-api" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 3: Frontend Type Changes
+        Phase 3: Frontend Types &amp; API
       
     </span>
   </a>
@@ -789,10 +843,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-4-frontend-api-changes" class="md-nav__link">
+  <a href="#phase-4-frontend-ui-components" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 4: Frontend API Changes
+        Phase 4: Frontend UI Components
       
     </span>
   </a>
@@ -800,21 +854,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phase-5-ui-components" class="md-nav__link">
+  <a href="#phase-5-testing-validation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Phase 5: UI Components
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#phase-6-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Phase 6: Integration
+        Phase 5: Testing &amp; Validation
       
     </span>
   </a>
@@ -839,10 +882,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#unit-tests" class="md-nav__link">
+  <a href="#unit-tests-backend" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Unit Tests
+        Unit Tests (Backend)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unit-tests-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unit Tests (Frontend)
       
     </span>
   </a>
@@ -900,10 +954,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-model" class="md-nav__link">
+  <a href="#architecture-diagram" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data Model
+        Architecture Diagram
       
     </span>
   </a>
@@ -911,10 +965,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#api-flow-create-category-with-child-todo" class="md-nav__link">
+  <a href="#database-schema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        API Flow - Create Category with Child Todo
+        Database Schema
       
     </span>
   </a>
@@ -922,10 +976,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#component-hierarchy" class="md-nav__link">
+  <a href="#category-hierarchy-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Component Hierarchy
+        Category Hierarchy Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-request-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Request Flow
       
     </span>
   </a>
@@ -950,10 +1015,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#category-visual-design" class="md-nav__link">
+  <a href="#category-manager-component" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Category Visual Design
+        Category Manager Component
       
     </span>
   </a>
@@ -961,10 +1026,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#visual-states" class="md-nav__link">
+  <a href="#category-filter-dropdown" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Visual States
+        Category Filter Dropdown
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#todo-item-with-category" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Todo Item with Category
       
     </span>
   </a>
@@ -988,10 +1064,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#future-enhancements" class="md-nav__link">
+  <a href="#out-of-scope-future-enhancements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Future Enhancements
+        Out of Scope (Future Enhancements)
       
     </span>
   </a>
@@ -1015,39 +1091,28 @@
 
 
 
-<h1 id="issue-1-add-subcategory-support-to-todo-items">Issue #1: Add subcategory support to todo items</h1>
+<h1 id="issue-2-add-sub-categories-support-for-todos">Issue #2: Add sub-categories support for todos</h1>
 <h2 id="summary">Summary</h2>
-<p>Implement a hierarchical category system that allows users to organize todo items under parent categories, enabling better task organization and grouping within the todo list.</p>
+<p>Implement a hierarchical category system that allows users to organize todos into categories and sub-categories with unlimited nesting depth, enabling better task organization by project, context, or priority.</p>
 <h2 id="root-cause-analysis">Root Cause Analysis</h2>
 <p><strong>Current State:</strong>
-- Todos are flat items with only <code>id</code>, <code>title</code>, <code>completed</code>, and <code>created_at</code> fields
-- No ability to group related tasks or create hierarchical structures
-- Users cannot organize complex projects or workflows effectively</p>
+- Todos can only be organized by completion status and creation date
+- No categorization or grouping mechanism exists
+- Users cannot organize related tasks together</p>
 <p><strong>Desired State:</strong>
-- Support for category items that can contain child todos
-- Hierarchical parent-child relationships between items
-- Visual distinction between categories and regular todos
-- Ability to expand/collapse categories to show/hide children</p>
+- Users can create categories with optional parent-child relationships
+- Todos can be assigned to any category level
+- Category hierarchy is visually clear in the UI
+- Filtering by category includes sub-categories</p>
 <h2 id="proposed-solution">Proposed Solution</h2>
-<p>Implement <strong>Option B</strong> from the issue description - a <code>parent_id</code> based approach for true hierarchical subcategories. This provides maximum flexibility for nested structures.</p>
-<p><strong>Key Design Decisions:</strong></p>
+<p>Implement a self-referential categories table with foreign key relationships, add category assignment to todos, and update the UI to support category management and filtering.</p>
+<h3 id="key-design-decisions">Key Design Decisions</h3>
 <ol>
-<li>
-<p><strong>Single Table Approach</strong>: Add <code>parent_id</code> and <code>item_type</code> columns to the existing <code>todos</code> table rather than creating a separate categories table. This simplifies queries and maintains backward compatibility.</p>
-</li>
-<li>
-<p><strong>Item Types</strong>: </p>
-</li>
-<li><code>category</code>: Items that can have children but cannot be completed</li>
-<li>
-<p><code>todo</code>: Regular todo items that can be completed and may have a parent</p>
-</li>
-<li>
-<p><strong>Circular Reference Prevention</strong>: Backend validation to ensure a category cannot be its own descendant.</p>
-</li>
-<li>
-<p><strong>Cascading Deletes</strong>: When a category is deleted, all child items are also deleted.</p>
-</li>
+<li><strong>Unlimited nesting depth</strong> - Parent-child relationships via <code>parent_id</code> foreign key</li>
+<li><strong>Optional categorization</strong> - Todos can exist without categories (nullable <code>category_id</code>)</li>
+<li><strong>Cascade deletes</strong> - Deleting a category reassigns child categories to null or deletes them (configurable)</li>
+<li><strong>Color coding</strong> - Optional color field for visual distinction</li>
+<li><strong>Circular reference prevention</strong> - Validation to prevent categories from being their own ancestors</li>
 </ol>
 <h2 id="files-to-modify">Files to Modify</h2>
 <table>
@@ -1059,40 +1124,32 @@
 </thead>
 <tbody>
 <tr>
-<td><code>server/src/db/database.js</code></td>
-<td>Add <code>parent_id</code> and <code>item_type</code> columns to schema</td>
+<td><code>server/src/db/database.ts</code></td>
+<td>Add categories table schema, add category_id to todos</td>
 </tr>
 <tr>
-<td><code>server/src/routes/todos.js</code></td>
-<td>Add category creation, parent filtering, circular reference validation, cascade delete</td>
-</tr>
-<tr>
-<td><code>electron/src/routes/todos.ts</code></td>
-<td>Mirror server route changes for Electron build</td>
+<td><code>server/src/routes/todos.ts</code></td>
+<td>Add category_id to todo responses, add category filtering</td>
 </tr>
 <tr>
 <td><code>client/src/types/todo.ts</code></td>
-<td>Add <code>parentId</code>, <code>itemType</code>, <code>children</code> fields to Todo interface</td>
+<td>Add categoryId to Todo interface</td>
 </tr>
 <tr>
 <td><code>client/src/api/todoApi.ts</code></td>
-<td>Add <code>createCategory</code>, <code>fetchTodosByParent</code>, <code>deleteCategory</code> functions</td>
-</tr>
-<tr>
-<td><code>client/src/components/TodoList.tsx</code></td>
-<td>Support nested rendering, expand/collapse state</td>
-</tr>
-<tr>
-<td><code>client/src/components/TodoItem.tsx</code></td>
-<td>Visual distinction for categories, expand/collapse UI</td>
-</tr>
-<tr>
-<td><code>client/src/components/AddTodoForm.tsx</code></td>
-<td>Add option to create categories vs todos</td>
+<td>Add category filtering parameter to fetchTodos</td>
 </tr>
 <tr>
 <td><code>client/src/App.tsx</code></td>
-<td>Add category creation handler, filter logic</td>
+<td>Add category management UI, category filter dropdown</td>
+</tr>
+<tr>
+<td><code>client/src/components/TodoList.tsx</code></td>
+<td>Display category badges on todos</td>
+</tr>
+<tr>
+<td><code>client/src/components/TodoItem.tsx</code></td>
+<td>Show category assignment, add category selector</td>
 </tr>
 </tbody>
 </table>
@@ -1106,91 +1163,205 @@
 </thead>
 <tbody>
 <tr>
-<td><code>client/src/components/CategoryForm.tsx</code></td>
-<td>Form component for creating new categories</td>
+<td><code>server/src/routes/categories.ts</code></td>
+<td>Category CRUD API endpoints</td>
 </tr>
 <tr>
-<td><code>server/src/utils/categoryValidation.js</code></td>
-<td>Utility for circular reference detection</td>
+<td><code>client/src/types/category.ts</code></td>
+<td>TypeScript types for categories</td>
+</tr>
+<tr>
+<td><code>client/src/api/categoryApi.ts</code></td>
+<td>API client for category operations</td>
+</tr>
+<tr>
+<td><code>client/src/components/CategoryManager.tsx</code></td>
+<td>UI for creating/editing/deleting categories</td>
+</tr>
+<tr>
+<td><code>client/src/components/CategoryFilter.tsx</code></td>
+<td>Dropdown to filter todos by category</td>
+</tr>
+<tr>
+<td><code>client/src/components/CategoryBadge.tsx</code></td>
+<td>Visual category indicator with color</td>
+</tr>
+<tr>
+<td><code>client/src/utils/categoryUtils.ts</code></td>
+<td>Helper functions for category hierarchy</td>
 </tr>
 </tbody>
 </table>
 <h2 id="implementation-steps">Implementation Steps</h2>
-<h3 id="phase-1-database-changes">Phase 1: Database Changes</h3>
+<h3 id="phase-1-database-schema-backend">Phase 1: Database Schema (Backend)</h3>
 <ol>
-<li>Add migration script to add <code>parent_id INTEGER</code> and <code>item_type TEXT DEFAULT 'todo'</code> columns</li>
-<li>Update schema creation to include new columns</li>
-<li>Add index on <code>parent_id</code> for efficient parent-based queries</li>
+<li>
+<p>Create <code>categories</code> table migration:
+   <code>sql
+   CREATE TABLE categories (
+     id INTEGER PRIMARY KEY AUTOINCREMENT,
+     name TEXT NOT NULL,
+     parent_id INTEGER,
+     color TEXT,
+     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+     FOREIGN KEY (parent_id) REFERENCES categories(id) ON DELETE SET NULL
+   );</code></p>
+</li>
+<li>
+<p>Add <code>category_id</code> column to <code>todos</code> table:
+   <code>sql
+   ALTER TABLE todos ADD COLUMN category_id INTEGER;
+   ALTER TABLE todos ADD FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL;</code></p>
+</li>
+<li>
+<p>Create index for efficient filtering:
+   <code>sql
+   CREATE INDEX idx_todos_category_id ON todos(category_id);</code></p>
+</li>
 </ol>
-<h3 id="phase-2-backend-api-changes">Phase 2: Backend API Changes</h3>
+<h3 id="phase-2-backend-api">Phase 2: Backend API</h3>
 <ol>
-<li>Modify GET <code>/api/todos</code> to support optional <code>?parent=</code> query parameter</li>
-<li>Add POST <code>/api/categories</code> endpoint for category creation</li>
-<li>Add GET <code>/api/categories</code> endpoint to list all categories</li>
-<li>Update DELETE to cascade delete children</li>
-<li>Add validation middleware to prevent circular references</li>
-<li>Update response serialization to include <code>item_type</code> and <code>parent_id</code></li>
+<li>Create category routes (<code>server/src/routes/categories.ts</code>):</li>
+<li><code>GET /api/categories</code> - List all categories (with hierarchy info)</li>
+<li><code>POST /api/categories</code> - Create new category</li>
+<li><code>PUT /api/categories/:id</code> - Update category</li>
+<li><code>DELETE /api/categories/:id</code> - Delete category (cascade handling)</li>
+<li>
+<p><code>GET /api/categories/:id/children</code> - Get child categories</p>
+</li>
+<li>
+<p>Update todo routes to support categories:</p>
+</li>
+<li>Add <code>category_id</code> to todo creation</li>
+<li>Add <code>category_id</code> to todo update</li>
+<li>Add <code>?category_id=X</code> query parameter for filtering</li>
+<li>
+<p>Include category info in todo responses (JOIN)</p>
+</li>
+<li>
+<p>Implement circular reference validation:</p>
+</li>
+<li>Prevent setting parent_id to self</li>
+<li>Prevent setting parent_id to any descendant</li>
 </ol>
-<h3 id="phase-3-frontend-type-changes">Phase 3: Frontend Type Changes</h3>
+<h3 id="phase-3-frontend-types-api">Phase 3: Frontend Types &amp; API</h3>
 <ol>
-<li>Update <code>Todo</code> interface with optional <code>parentId</code>, <code>itemType</code>, <code>children</code> fields</li>
-<li>Create <code>Category</code> type extending <code>Todo</code> with specific properties</li>
+<li>
+<p>Create category TypeScript types (<code>client/src/types/category.ts</code>):
+   <code>typescript
+   interface Category {
+     id: number;
+     name: string;
+     parent_id: number | null;
+     color: string | null;
+     created_at: string;
+     children?: Category[];
+   }</code></p>
+</li>
+<li>
+<p>Create category API client (<code>client/src/api/categoryApi.ts</code>):</p>
+</li>
+<li>fetchCategories(), createCategory(), updateCategory(), deleteCategory()</li>
+<li>
+<p>Helper to build category tree from flat list</p>
+</li>
+<li>
+<p>Update todo types and API to include categoryId</p>
+</li>
 </ol>
-<h3 id="phase-4-frontend-api-changes">Phase 4: Frontend API Changes</h3>
+<h3 id="phase-4-frontend-ui-components">Phase 4: Frontend UI Components</h3>
 <ol>
-<li>Add <code>createCategory(title: string)</code> function</li>
-<li>Add <code>fetchCategories()</code> function</li>
-<li>Add <code>fetchTodosByParent(parentId: number | null)</code> function</li>
-<li>Update existing functions to handle new response format</li>
+<li>
+<p>Create CategoryBadge component - displays category name with color background</p>
+</li>
+<li>
+<p>Create CategoryManager component:</p>
+<ul>
+<li>List categories in tree view</li>
+<li>Add/Edit/Delete category forms</li>
+<li>Parent category selector (with indentation for hierarchy)</li>
+<li>Color picker</li>
+</ul>
+</li>
+<li>
+<p>Create CategoryFilter component:</p>
+<ul>
+<li>Dropdown with category tree</li>
+<li>"All Categories" option</li>
+<li>Visual indentation for sub-categories</li>
+</ul>
+</li>
+<li>
+<p>Update TodoItem:</p>
+<ul>
+<li>Display category badge</li>
+<li>Category selector dropdown</li>
+<li>Inherit parent category color styling</li>
+</ul>
+</li>
+<li>
+<p>Update TodoList:</p>
+<ul>
+<li>Group todos by category (optional view mode)</li>
+<li>Show category headers</li>
+</ul>
+</li>
+<li>
+<p>Update App.tsx:</p>
+<ul>
+<li>Integrate CategoryManager</li>
+<li>Add category filter to todo list</li>
+<li>Add "uncategorized" filter option</li>
+</ul>
+</li>
 </ol>
-<h3 id="phase-5-ui-components">Phase 5: UI Components</h3>
+<h3 id="phase-5-testing-validation">Phase 5: Testing &amp; Validation</h3>
 <ol>
-<li>Create <code>CategoryForm</code> component for category creation</li>
-<li>Update <code>TodoItem</code> to:</li>
-<li>Display different styling for categories vs todos</li>
-<li>Show expand/collapse chevron for categories</li>
-<li>Hide checkbox for categories (they can't be completed)</li>
-<li>Update <code>TodoList</code> to:</li>
-<li>Support recursive rendering of nested items</li>
-<li>Manage expand/collapse state per category</li>
-<li>Group children under parent categories</li>
-<li>Update <code>AddTodoForm</code> to allow choosing between todo and category</li>
-</ol>
-<h3 id="phase-6-integration">Phase 6: Integration</h3>
-<ol>
-<li>Wire up category creation in App component</li>
-<li>Implement parent-child relationship UI</li>
-<li>Add filtering to show only root-level items by default</li>
-<li>Test expand/collapse functionality</li>
+<li>
+<p>Write backend tests for category API endpoints</p>
+</li>
+<li>
+<p>Test circular reference prevention</p>
+</li>
+<li>
+<p>Test cascade delete behavior</p>
+</li>
+<li>
+<p>Test frontend category management UI</p>
+</li>
+<li>
+<p>Test category filtering with nested categories</p>
+</li>
 </ol>
 <h2 id="test-strategy">Test Strategy</h2>
-<h3 id="unit-tests">Unit Tests</h3>
+<h3 id="unit-tests-backend">Unit Tests (Backend)</h3>
 <ul>
-<li><strong>Backend</strong>: </li>
-<li>Category creation validation</li>
-<li>Circular reference detection (A→B→A, A→A)</li>
-<li>Cascade delete behavior</li>
-<li>Parent filtering queries</li>
-<li><strong>Frontend</strong>:</li>
-<li>CategoryForm submission</li>
-<li>Expand/collapse state management</li>
-<li>Nested rendering logic</li>
+<li><strong>Category CRUD</strong>: Create, read, update, delete operations</li>
+<li><strong>Hierarchy</strong>: Parent-child relationships, unlimited depth</li>
+<li><strong>Circular reference</strong>: Prevent self-parent, prevent descendant-as-parent</li>
+<li><strong>Cascade delete</strong>: Verify child categories handled correctly</li>
+<li><strong>Todo-category association</strong>: Assign, reassign, remove categories</li>
+</ul>
+<h3 id="unit-tests-frontend">Unit Tests (Frontend)</h3>
+<ul>
+<li><strong>Category tree building</strong>: Convert flat list to nested structure</li>
+<li><strong>Category badge rendering</strong>: Color and name display</li>
+<li><strong>Filter functionality</strong>: Correct todos shown for selected category</li>
 </ul>
 <h3 id="integration-tests">Integration Tests</h3>
 <ul>
-<li>Create category → add todo as child → verify hierarchy</li>
-<li>Delete category → verify children are deleted</li>
-<li>Update parent_id → verify no circular references</li>
-<li>Toggle todo completion under category → verify parent unaffected</li>
+<li><strong>Full workflow</strong>: Create category → assign todo → filter by category</li>
+<li><strong>Nested categories</strong>: Create parent → child → grandchild → assign todo to grandchild → filter by parent (should include todo)</li>
+<li><strong>Delete cascade</strong>: Delete parent category → verify children handling</li>
 </ul>
 <h3 id="edge-cases">Edge Cases</h3>
 <ul>
-<li>Maximum nesting depth (prevent stack overflow)</li>
-<li>Orphaned todos (parent deleted)</li>
-<li>Empty categories</li>
-<li>Moving todos between categories</li>
-<li>Self-referential parent_id attempts</li>
-<li>Concurrent modifications to same hierarchy</li>
+<li><strong>Empty categories</strong>: Categories with no todos</li>
+<li><strong>Deep nesting</strong>: 5+ levels of sub-categories</li>
+<li><strong>Orphaned todos</strong>: Todos whose category was deleted</li>
+<li><strong>Circular reference attempts</strong>: Various invalid parent assignments</li>
+<li><strong>Duplicate names</strong>: Same name in different branches (allowed) vs same parent (should warn)</li>
+<li><strong>Color validation</strong>: Invalid color codes</li>
 </ul>
 <h2 id="risks-mitigations">Risks &amp; Mitigations</h2>
 <table>
@@ -1202,62 +1373,129 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Circular references cause infinite loops</strong></td>
-<td>Implement strict validation in backend before any parent_id update; use depth-limited recursion in queries</td>
+<td><strong>Circular references in category hierarchy</strong></td>
+<td>Implement validation function that checks all ancestors before allowing parent_id change</td>
 </tr>
 <tr>
-<td><strong>Performance degradation with deep nesting</strong></td>
-<td>Limit max depth to 5 levels; add database indexes on parent_id; consider materialized path for complex queries</td>
+<td><strong>Performance with deep nesting</strong></td>
+<td>Add database indexes, limit practical depth to 10 levels in UI, cache category tree</td>
 </tr>
 <tr>
-<td><strong>Breaking existing todos</strong></td>
-<td>Make new columns optional with defaults; existing todos remain valid with <code>item_type='todo'</code> and <code>parent_id=NULL</code></td>
+<td><strong>Migration data loss</strong></td>
+<td>Use ALTER TABLE with DEFAULT NULL, existing todos remain uncategorized</td>
 </tr>
 <tr>
-<td><strong>UI complexity for nested items</strong></td>
-<td>Start with single-level nesting (categories → todos); add multi-level support in future iteration</td>
+<td><strong>UI complexity for category selection</strong></td>
+<td>Use indented dropdown with visual hierarchy, search functionality for large category lists</td>
 </tr>
 <tr>
-<td><strong>Cascade delete data loss</strong></td>
-<td>Add confirmation dialog before deleting categories; consider soft-delete with <code>deleted_at</code> column in future</td>
+<td><strong>Delete cascade confusion</strong></td>
+<td>Show confirmation dialog with list of affected child categories and todos before deleting</td>
+</tr>
+<tr>
+<td><strong>Color accessibility</strong></td>
+<td>Provide preset color palette with sufficient contrast, allow custom colors with validation</td>
 </tr>
 </tbody>
 </table>
 <h2 id="diagrams">Diagrams</h2>
-<h3 id="data-model">Data Model</h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../issue-1-data-model.png" data-desc-position="bottom"><img alt="Data Model Diagram" src="../issue-1-data-model.png"></a></p>
-<h3 id="api-flow-create-category-with-child-todo">API Flow - Create Category with Child Todo</h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../issue-1-api-flow.png" data-desc-position="bottom"><img alt="API Flow Diagram" src="../issue-1-api-flow.png"></a></p>
-<h3 id="component-hierarchy">Component Hierarchy</h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../issue-1-component-hierarchy.png" data-desc-position="bottom"><img alt="Component Hierarchy Diagram" src="../issue-1-component-hierarchy.png"></a></p>
+<h3 id="architecture-diagram">Architecture Diagram</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../issue-2-architecture.png" data-desc-position="bottom"><img alt="Architecture Diagram" src="../issue-2-architecture.png"></a></p>
+<h3 id="database-schema">Database Schema</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../issue-2-database.png" data-desc-position="bottom"><img alt="Database Schema" src="../issue-2-database.png"></a></p>
+<h3 id="category-hierarchy-flow">Category Hierarchy Flow</h3>
+<pre><code class="language-mermaid">graph TD
+    Root[Root Category] --&gt; Child1[Child Category 1]
+    Root --&gt; Child2[Child Category 2]
+    Child1 --&gt; Grandchild1[Grandchild 1]
+    Child1 --&gt; Grandchild2[Grandchild 2]
+    Grandchild1 --&gt; Todo1[Todo A]
+    Grandchild1 --&gt; Todo2[Todo B]
+    Child2 --&gt; Todo3[Todo C]
+    Root --&gt; Todo4[Todo D - Direct]
+
+    style Root fill:#3f51b5,color:#fff
+    style Child1 fill:#5c6bc0,color:#fff
+    style Child2 fill:#5c6bc0,color:#fff
+    style Grandchild1 fill:#7986cb,color:#fff
+    style Grandchild2 fill:#7986cb,color:#fff
+    style Todo1 fill:#4caf50,color:#fff
+    style Todo2 fill:#4caf50,color:#fff
+    style Todo3 fill:#4caf50,color:#fff
+    style Todo4 fill:#4caf50,color:#fff
+</code></pre>
+<h3 id="api-request-flow">API Request Flow</h3>
+<pre><code class="language-mermaid">sequenceDiagram
+    participant U as User
+    participant UI as React UI
+    participant API as Express API
+    participant DB as SQLite
+
+    U-&gt;&gt;UI: Create Category
+    UI-&gt;&gt;API: POST /api/categories
+    API-&gt;&gt;DB: INSERT INTO categories
+    DB--&gt;&gt;API: New category ID
+    API--&gt;&gt;UI: Created category
+    UI--&gt;&gt;U: Show in tree
+
+    U-&gt;&gt;UI: Assign Todo to Category
+    UI-&gt;&gt;API: PUT /api/todos/:id
+    API-&gt;&gt;DB: UPDATE todos SET category_id
+    DB--&gt;&gt;API: Updated todo
+    API--&gt;&gt;UI: Todo with category
+    UI--&gt;&gt;U: Show category badge
+
+    U-&gt;&gt;UI: Filter by Category
+    UI-&gt;&gt;API: GET /api/todos?category_id=X
+    API-&gt;&gt;DB: SELECT with JOIN + subcategories
+    DB--&gt;&gt;API: Filtered todos
+    API--&gt;&gt;UI: Filtered list
+    UI--&gt;&gt;U: Display filtered todos
+</code></pre>
 <h2 id="ui-mockups">UI Mockups</h2>
-<h3 id="category-visual-design">Category Visual Design</h3>
-<p>Categories will have:
-- <strong>Different background color</strong>: Light indigo tint (<code>bg-indigo-50</code>)
-- <strong>Chevron icon</strong>: Right-pointing when collapsed, down when expanded
-- <strong>No checkbox</strong>: Categories cannot be completed
-- <strong>Folder icon</strong>: Visual indicator of category type
-- <strong>Nested indentation</strong>: Children indented 24px under parent</p>
-<h3 id="visual-states">Visual States</h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../issue-1-ui-mockup.png" data-desc-position="bottom"><img alt="UI Mockup - Category States" src="../issue-1-ui-mockup.png"></a></p>
+<h3 id="category-manager-component">Category Manager Component</h3>
+<p>The CategoryManager will display:
+- Tree view of categories with expand/collapse
+- Add category button (with parent selector)
+- Edit/Delete actions per category
+- Color picker for each category
+- Drag-and-drop reordering (future enhancement)</p>
+<h3 id="category-filter-dropdown">Category Filter Dropdown</h3>
+<ul>
+<li>"All Categories" at top</li>
+<li>Indented category list showing hierarchy</li>
+<li>Visual color indicators</li>
+<li>Badge showing todo count per category (future)</li>
+</ul>
+<h3 id="todo-item-with-category">Todo Item with Category</h3>
+<ul>
+<li>Category badge displayed next to todo title</li>
+<li>Badge shows category color</li>
+<li>Click badge to filter by that category</li>
+<li>Dropdown to change category assignment</li>
+</ul>
 <h2 id="acceptance-criteria">Acceptance Criteria</h2>
 <ul>
-<li>[x] Users can create category items</li>
-<li>[x] Users can create todos under a category</li>
-<li>[x] Categories can be expanded/collapsed to show/hide child todos</li>
-<li>[x] Visual distinction between categories and regular todos</li>
-<li>[x] API supports filtering by parent category</li>
-<li>[x] Existing todos continue to work without modification</li>
-<li>[x] Prevent circular references in parent-child relationships</li>
+<li>[x] Users can create, edit, and delete categories</li>
+<li>[x] Categories can have parent-child relationships (unlimited depth)</li>
+<li>[x] Todos can be assigned to any category</li>
+<li>[x] Todos can be filtered by category (including sub-categories)</li>
+<li>[x] UI clearly displays category hierarchy</li>
+<li>[x] Existing todos remain functional without categories</li>
+<li>[x] Database migration preserves existing data</li>
+<li>[ ] Circular reference prevention implemented</li>
+<li>[ ] Category filtering includes sub-categories recursively</li>
+<li>[ ] Delete confirmation shows affected items</li>
 </ul>
-<h2 id="future-enhancements">Future Enhancements</h2>
+<h2 id="out-of-scope-future-enhancements">Out of Scope (Future Enhancements)</h2>
 <ul>
-<li>Drag-and-drop reordering of items</li>
-<li>Multiple categories per todo (tags)</li>
-<li>Category colors and icons</li>
-<li>Category-level completion (complete all children)</li>
-<li>Move todos between categories</li>
 <li>Category templates</li>
+<li>Shared categories across users (if multi-user support added)</li>
+<li>Category-based notifications or reminders</li>
+<li>Category statistics and insights</li>
+<li>Drag-and-drop category reordering</li>
+<li>Bulk category assignment for multiple todos</li>
+<li>Category color presets and themes</li>
 <li>Export/import category structures</li>
 </ul>
 
